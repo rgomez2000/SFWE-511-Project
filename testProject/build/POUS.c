@@ -186,7 +186,7 @@ void PROGRAM5_body__(PROGRAM5 *data__) {
   __SET_VAR(data__->,CAP_BOTTLE,,__GET_VAR(data__->CAP_PRESENCE_HOPPER,));
   __SET_VAR(data__->,CAPPING_ENABLE,,!(__GET_VAR(data__->MIN_CAP_HOPPER_LEVEL,)));
   __SET_VAR(data__->,ALARM_CAPS,,__GET_VAR(data__->MIN_CAP_HOPPER_LEVEL,));
-  __SET_VAR(data__->,ACTUATOR_ALARM,,(__GET_VAR(data__->MAX_CAP_TORQUE_SENSOR,) && __GET_VAR(data__->MIN_CAP_HOPPER_LEVEL,)));
+  __SET_VAR(data__->,ACTUATOR_ALARM,,(__GET_VAR(data__->MAX_CAP_TORQUE_SENSOR,) || __GET_VAR(data__->MIN_CAP_TORQUE_SENSOR,)));
 
   goto __end;
 

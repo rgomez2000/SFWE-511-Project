@@ -115,7 +115,7 @@ PROGRAM program5
   Cap_Bottle := Cap_Presence_Hopper;
   Capping_Enable := NOT(Min_Cap_Hopper_Level);
   Alarm_Caps := Min_Cap_Hopper_Level;
-  Actuator_Alarm := Max_Cap_Torque_Sensor AND Min_Cap_Hopper_Level;
+  Actuator_Alarm := Max_Cap_Torque_Sensor OR Min_Cap_Torque_Sensor;
 END_PROGRAM
 
 PROGRAM program6

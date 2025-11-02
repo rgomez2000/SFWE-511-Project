@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-10-15T14:42:18"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-11-02T12:32:49">
+  <contentHeader name="Unnamed" modificationDateTime="2025-11-02T13:42:17">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -1371,7 +1371,15 @@
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="12">
                   <position x="720" y="350"/>
-                  <position x="581" y="350"/>
+                  <position x="580" y="350"/>
+                  <position x="580" y="390"/>
+                  <position x="461" y="390"/>
+                </connection>
+                <connection refLocalId="11">
+                  <position x="720" y="350"/>
+                  <position x="580" y="350"/>
+                  <position x="580" y="320"/>
+                  <position x="460" y="320"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
@@ -1379,27 +1387,31 @@
               </connectionPointOut>
               <variable>Actuator_Alarm</variable>
             </coil>
-            <contact localId="11" negated="false" width="21" height="20">
-              <position x="390" y="340"/>
+            <contact localId="11" negated="false" width="20" height="20">
+              <position x="440" y="310"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="390" y="350"/>
+                  <position x="440" y="320"/>
+                  <position x="380" y="320"/>
+                  <position x="380" y="350"/>
                   <position x="320" y="350"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="21" y="10"/>
+                <relPosition x="20" y="10"/>
               </connectionPointOut>
-              <variable>Min_Cap_Hopper_Level</variable>
+              <variable>Min_Cap_Torque_Sensor</variable>
             </contact>
             <contact localId="12" negated="false" width="21" height="20">
-              <position x="560" y="340"/>
+              <position x="440" y="380"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="11">
-                  <position x="560" y="350"/>
-                  <position x="411" y="350"/>
+                <connection refLocalId="1">
+                  <position x="440" y="390"/>
+                  <position x="380" y="390"/>
+                  <position x="380" y="350"/>
+                  <position x="320" y="350"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
