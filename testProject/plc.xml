@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-10-15T14:42:18"/>
-  <contentHeader name="Unnamed" modificationDateTime="2025-10-31T16:00:33">
+  <contentHeader name="Unnamed" modificationDateTime="2025-11-02T12:32:49">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -1254,48 +1254,62 @@
               <position x="830" y="70"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="5">
+                <connection refLocalId="4">
                   <position x="830" y="90"/>
                   <position x="721" y="90"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="110"/>
-                <connection refLocalId="7">
+                <connection refLocalId="6">
                   <position x="830" y="180"/>
                   <position x="721" y="180"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="190"/>
-                <connection refLocalId="8">
+                <connection refLocalId="3">
                   <position x="830" y="260"/>
                   <position x="721" y="260"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="280"/>
-                <connection refLocalId="11">
+                <connection refLocalId="9">
                   <position x="830" y="350"/>
-                  <position x="720" y="350"/>
+                  <position x="741" y="350"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
             <coil localId="3" negated="false" width="21" height="20">
-              <position x="420" y="250"/>
+              <position x="700" y="250"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="1">
-                  <position x="420" y="260"/>
-                  <position x="320" y="260"/>
+                <connection refLocalId="8">
+                  <position x="700" y="260"/>
+                  <position x="441" y="260"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>Cap_Presence_Hopper</variable>
+              <variable>Cap_Bottle</variable>
             </coil>
-            <coil localId="4" negated="true" width="21" height="20">
+            <coil localId="4" negated="false" width="21" height="20">
+              <position x="700" y="80"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="5">
+                  <position x="700" y="90"/>
+                  <position x="441" y="90"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Capping_Enable</variable>
+            </coil>
+            <contact localId="5" negated="true" width="21" height="20">
               <position x="420" y="80"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
@@ -1308,22 +1322,22 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Min_Cap_Hopper_Level</variable>
-            </coil>
-            <contact localId="5" negated="false" width="21" height="20">
-              <position x="700" y="80"/>
+            </contact>
+            <coil localId="6" negated="false" width="21" height="20">
+              <position x="700" y="170"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="4">
-                  <position x="700" y="90"/>
-                  <position x="441" y="90"/>
+                <connection refLocalId="7">
+                  <position x="700" y="180"/>
+                  <position x="441" y="180"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>Capping_Enable</variable>
-            </contact>
-            <coil localId="6" negated="false" width="21" height="20">
+              <variable>Alarm_Caps</variable>
+            </coil>
+            <contact localId="7" negated="false" width="21" height="20">
               <position x="420" y="170"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
@@ -1336,83 +1350,68 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Min_Cap_Hopper_Level</variable>
-            </coil>
-            <contact localId="7" negated="false" width="21" height="20">
-              <position x="700" y="170"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="6">
-                  <position x="700" y="180"/>
-                  <position x="441" y="180"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Alarm_Caps</variable>
             </contact>
             <contact localId="8" negated="false" width="21" height="20">
-              <position x="700" y="250"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="3">
-                  <position x="700" y="260"/>
-                  <position x="441" y="260"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Cap_Bottle</variable>
-            </contact>
-            <coil localId="9" negated="false" width="21" height="20">
-              <position x="400" y="340"/>
+              <position x="420" y="250"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="400" y="350"/>
-                  <position x="320" y="350"/>
+                  <position x="420" y="260"/>
+                  <position x="320" y="260"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>Min_Cap_Torque_Sensor</variable>
-            </coil>
-            <coil localId="10" negated="false" width="21" height="20">
-              <position x="530" y="320"/>
+              <variable>Cap_Presence_Hopper</variable>
+            </contact>
+            <coil localId="9" negated="false" width="21" height="20">
+              <position x="720" y="340"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="9">
-                  <position x="530" y="330"/>
-                  <position x="495" y="330"/>
-                  <position x="495" y="350"/>
-                  <position x="421" y="350"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Max_Cap_Torque_Sensor</variable>
-            </coil>
-            <contact localId="11" negated="false" width="21" height="20">
-              <position x="700" y="340"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="10">
-                  <position x="700" y="350"/>
-                  <position x="645" y="350"/>
-                  <position x="645" y="330"/>
-                  <position x="551" y="330"/>
+                <connection refLocalId="12">
+                  <position x="720" y="350"/>
+                  <position x="581" y="350"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Actuator_Alarm</variable>
+            </coil>
+            <contact localId="11" negated="false" width="21" height="20">
+              <position x="390" y="340"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="1">
+                  <position x="390" y="350"/>
+                  <position x="320" y="350"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Min_Cap_Hopper_Level</variable>
+            </contact>
+            <contact localId="12" negated="false" width="21" height="20">
+              <position x="560" y="340"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="11">
+                  <position x="560" y="350"/>
+                  <position x="411" y="350"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Max_Cap_Torque_Sensor</variable>
             </contact>
           </LD>
         </body>
+        <documentation>
+          <xhtml:p><![CDATA[Capping Subsystem]]></xhtml:p>
+        </documentation>
       </pou>
       <pou name="program6" pouType="program">
         <interface>
@@ -1474,67 +1473,67 @@
               <position x="810" y="130"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="5">
+                <connection refLocalId="4">
                   <position x="810" y="150"/>
-                  <position x="721" y="150"/>
+                  <position x="680" y="150"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="170"/>
-                <connection refLocalId="7">
+                <connection refLocalId="6">
                   <position x="810" y="300"/>
-                  <position x="720" y="300"/>
+                  <position x="680" y="300"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
-            <coil localId="3" negated="false" width="21" height="20">
-              <position x="340" y="140"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="1">
-                  <position x="340" y="150"/>
-                  <position x="250" y="150"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Bottle_Presence_Label</variable>
-            </coil>
             <coil localId="4" negated="false" width="21" height="20">
-              <position x="490" y="140"/>
+              <position x="660" y="140"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="3">
-                  <position x="490" y="150"/>
-                  <position x="361" y="150"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="21" y="10"/>
-              </connectionPointOut>
-              <variable>Label_Presence</variable>
-            </coil>
-            <contact localId="5" negated="false" width="21" height="20">
-              <position x="700" y="140"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="4">
-                  <position x="700" y="150"/>
-                  <position x="511" y="150"/>
+                <connection refLocalId="5">
+                  <position x="660" y="150"/>
+                  <position x="491" y="150"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Label_Applicator</variable>
+            </coil>
+            <contact localId="5" negated="false" width="21" height="20">
+              <position x="470" y="140"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="8">
+                  <position x="470" y="150"/>
+                  <position x="341" y="150"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Bottle_Presence_Label</variable>
             </contact>
             <coil localId="6" negated="false" width="21" height="20">
-              <position x="400" y="290"/>
+              <position x="660" y="290"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="7">
+                  <position x="660" y="300"/>
+                  <position x="371" y="300"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Actuator_Alarm</variable>
+            </coil>
+            <contact localId="7" negated="false" width="21" height="20">
+              <position x="350" y="290"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="400" y="300"/>
+                  <position x="350" y="300"/>
                   <position x="250" y="300"/>
                 </connection>
               </connectionPointIn>
@@ -1542,23 +1541,26 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Label_Positioning</variable>
-            </coil>
-            <contact localId="7" negated="false" width="21" height="20">
-              <position x="700" y="290"/>
+            </contact>
+            <contact localId="8" negated="false" width="21" height="20">
+              <position x="320" y="140"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="6">
-                  <position x="700" y="300"/>
-                  <position x="421" y="300"/>
+                <connection refLocalId="1">
+                  <position x="320" y="150"/>
+                  <position x="250" y="150"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>Actuator_Alarm</variable>
+              <variable>Label_Presence</variable>
             </contact>
           </LD>
         </body>
+        <documentation>
+          <xhtml:p><![CDATA[Labeling Subsystem]]></xhtml:p>
+        </documentation>
       </pou>
       <pou name="program7" pouType="program">
         <interface>
@@ -1623,46 +1625,98 @@
               </connectionPointOut>
             </leftPowerRail>
             <rightPowerRail localId="2" width="20" height="280">
-              <position x="670" y="80"/>
+              <position x="670" y="90"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="7">
-                  <position x="670" y="100"/>
-                  <position x="610" y="100"/>
+                <connection refLocalId="3">
+                  <position x="670" y="110"/>
+                  <position x="591" y="110"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
-                <relPosition x="0" y="110"/>
-                <connection refLocalId="8">
+                <relPosition x="0" y="100"/>
+                <connection refLocalId="4">
                   <position x="670" y="190"/>
-                  <position x="620" y="190"/>
+                  <position x="590" y="190"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
-                <relPosition x="0" y="170"/>
-                <connection refLocalId="9">
-                  <position x="670" y="250"/>
-                  <position x="653" y="250"/>
-                  <position x="653" y="260"/>
-                  <position x="620" y="260"/>
+                <relPosition x="0" y="180"/>
+                <connection refLocalId="5">
+                  <position x="670" y="270"/>
+                  <position x="590" y="270"/>
                 </connection>
               </connectionPointIn>
               <connectionPointIn>
                 <relPosition x="0" y="260"/>
-                <connection refLocalId="10">
-                  <position x="670" y="340"/>
-                  <position x="655" y="340"/>
-                  <position x="655" y="350"/>
-                  <position x="620" y="350"/>
+                <connection refLocalId="6">
+                  <position x="670" y="350"/>
+                  <position x="590" y="350"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
             <coil localId="3" negated="false" width="21" height="20">
-              <position x="340" y="100"/>
+              <position x="570" y="100"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="7">
+                  <position x="570" y="110"/>
+                  <position x="371" y="110"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Reject_Bottle</variable>
+            </coil>
+            <coil localId="4" negated="false" width="21" height="20">
+              <position x="570" y="180"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="8">
+                  <position x="570" y="190"/>
+                  <position x="371" y="190"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Reject_Bottle</variable>
+            </coil>
+            <coil localId="5" negated="false" width="21" height="20">
+              <position x="570" y="260"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="9">
+                  <position x="570" y="270"/>
+                  <position x="371" y="270"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Reject_Bottle</variable>
+            </coil>
+            <coil localId="6" negated="false" width="21" height="20">
+              <position x="570" y="340"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="10">
+                  <position x="570" y="350"/>
+                  <position x="371" y="350"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Reject_Bottle</variable>
+            </coil>
+            <contact localId="7" negated="false" width="21" height="20">
+              <position x="350" y="100"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="340" y="110"/>
+                  <position x="350" y="110"/>
                   <position x="260" y="110"/>
                 </connection>
               </connectionPointIn>
@@ -1670,111 +1724,54 @@
                 <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Fill_Level_Detect</variable>
-            </coil>
-            <coil localId="4" negated="false" width="20" height="20">
-              <position x="340" y="180"/>
+            </contact>
+            <contact localId="8" negated="false" width="21" height="20">
+              <position x="350" y="180"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="340" y="190"/>
+                  <position x="350" y="190"/>
                   <position x="260" y="190"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Optical_Neck_sensor</variable>
-            </coil>
-            <coil localId="5" negated="false" width="20" height="20">
-              <position x="340" y="260"/>
+            </contact>
+            <contact localId="9" negated="false" width="21" height="20">
+              <position x="350" y="260"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="340" y="270"/>
+                  <position x="350" y="270"/>
                   <position x="260" y="270"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Bottle_Weight</variable>
-            </coil>
-            <coil localId="6" negated="false" width="20" height="20">
-              <position x="340" y="340"/>
+            </contact>
+            <contact localId="10" negated="false" width="21" height="20">
+              <position x="350" y="340"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="1">
-                  <position x="340" y="350"/>
+                  <position x="350" y="350"/>
                   <position x="260" y="350"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>Cap_Torque_Sensor</variable>
-            </coil>
-            <contact localId="7" negated="false" width="20" height="20">
-              <position x="590" y="90"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="3">
-                  <position x="590" y="100"/>
-                  <position x="475" y="100"/>
-                  <position x="475" y="110"/>
-                  <position x="361" y="110"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>Reject_Bottle</variable>
-            </contact>
-            <contact localId="8" negated="false" width="20" height="20">
-              <position x="600" y="180"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="4">
-                  <position x="600" y="190"/>
-                  <position x="360" y="190"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>Reject_Bottle</variable>
-            </contact>
-            <contact localId="9" negated="false" width="20" height="20">
-              <position x="600" y="250"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="5">
-                  <position x="600" y="260"/>
-                  <position x="480" y="260"/>
-                  <position x="480" y="270"/>
-                  <position x="360" y="270"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>Reject_Bottle</variable>
-            </contact>
-            <contact localId="10" negated="false" width="20" height="20">
-              <position x="600" y="340"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="6">
-                  <position x="600" y="350"/>
-                  <position x="360" y="350"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>Reject_Bottle</variable>
             </contact>
           </LD>
         </body>
+        <documentation>
+          <xhtml:p><![CDATA[Quality and Inspection Subsystem]]></xhtml:p>
+        </documentation>
       </pou>
     </pous>
   </types>
@@ -1793,6 +1790,15 @@
           </task>
           <task name="task4" priority="0" interval="T#20ms">
             <pouInstance name="instance4" typeName="program4"/>
+          </task>
+          <task name="task5" priority="0" interval="T#20ms">
+            <pouInstance name="instance5" typeName="program5"/>
+          </task>
+          <task name="task6" priority="0" interval="T#20ms">
+            <pouInstance name="instance6" typeName="program6"/>
+          </task>
+          <task name="task7" priority="0" interval="T#20ms">
+            <pouInstance name="instance7" typeName="program7"/>
           </task>
         </resource>
       </configuration>
